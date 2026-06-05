@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cozy Corner | Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fef7e8;
+        }
+        header {
+            background-color: #8b5a2b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #6b3e1a;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        .contact-info {
+            background-color: #e2c7a1;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 50%;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border: 1px solid #8b5a2b;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #8b5a2b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #8b5a2b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📞 Contact Cozy Corner</h1>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="catalog.html">📖 Book Catalog</a>
+    <a href="contact.html">📞 Contact Us</a>
+</nav>
+
+<main>
+    <div class="contact-info">
+        <h3>📍 Visit our shop</h3>
+        <p>42 Story Lane, Booktown, BK 12345</p>
+        <p>📞 Phone: (555) 123-BOOK (2665)</p>
+        <p>✉️ Email: hello@cozycornerbooks.com</p>
+    </div>
+
+    <h3>📝 Quick order / Ask a question</h3>
+    <form action="#" method="post">
+        <label for="name">Full name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="book-choice">Which book interests you?</label>
+        <select id="book-choice" name="book">
+            <option value="1984">1984 – Orwell</option>
+            <option value="pride">Pride and Prejudice – Austen</option>
+            <option value="hobbit">The Hobbit – Tolkien</option>
+        </select>
+
+        <label for="message">Your message / order details:</label>
+        <textarea id="message" name="message" rows="4" placeholder="I would like to reserve..."></textarea>
+
+        <button type="submit">Send message</button>
+        <button type="reset">Clear form</button>
+    </form>
+</main>
+
+<footer>
+    <p>✨ Come for the books, stay for the stories ✨</p>
+</footer>
+
+</body>
+</html>

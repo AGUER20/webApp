@@ -1,509 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>AquaFlow | Pure Water Delivery – Home & Office</title>
-  <meta name="description" content="Eco-friendly spring water delivery for homes and businesses. Same-day delivery, subscription plans, and premium 5-gallon bottles.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
- body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.5;
-      color: #1a2c3e;
-      background-color: #ffffff;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* header & navigation */
-    .navbar {
-      background: white;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(2px);
-      background: rgba(255, 255, 255, 0.96);
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo i {
-      font-size: 2rem;
-      color: #0f7b6e;
-    }
-
-    .logo span {
-      font-weight: 800;
-      font-size: 1.6rem;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #0f7b6e, #1ba994);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 600;
-      color: #1f3b4c;
-      transition: 0.2s;
-    }
-
-    .nav-links a:hover, .nav-links a.active {
-      color: #0f7b6e;
-    }
-
-    .btn-outline {
-      border: 2px solid #0f7b6e;
-      background: transparent;
-      padding: 0.5rem 1.3rem;
-      border-radius: 40px;
-      font-weight: 600;
-      color: #0f7b6e;
-      transition: 0.2s;
-    }
-
-    .btn-outline:hover {
-      background: #0f7b6e;
-      color: white;
-    }
-
-    /* hero */
-    .hero {
-      background: linear-gradient(100deg, #f0faf8 0%, #e0f2ef 100%);
-      padding: 4rem 0 5rem;
-    }
-
-    .hero-grid {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .hero-content {
-      flex: 1;
-    }
-
-    .hero-badge {
-      background: #d1f0eb;
-      display: inline-block;
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: #0a5d52;
-      margin-bottom: 1rem;
-    }
-
-    .hero-content h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 1.2rem;
-      color: #103d33;
-    }
-
-    .hero-content p {
-      font-size: 1.15rem;
-      color: #2c4b5e;
-      margin-bottom: 2rem;
-      max-width: 90%;
-    }
-
-    .btn-primary {
-      background: #0f7b6e;
-      color: white;
-      border: none;
-      padding: 0.9rem 2rem;
-      border-radius: 60px;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      box-shadow: 0 8px 14px rgba(15, 123, 110, 0.25);
-    }
-
-    .btn-primary:hover {
-      background: #0b6459;
-      transform: translateY(-2px);
-    }
-   .btn-secondary {
-      background: white;
-      color: #0f7b6e;
-      border: 1px solid #cbdcd9;
-      padding: 0.9rem 1.8rem;
-      border-radius: 60px;
-      font-weight: 600;
-      margin-left: 1rem;
-      transition: 0.2s;
-      text-decoration: none;
-    }
-
-    .btn-secondary:hover {
-      border-color: #0f7b6e;
-      background: #f0faf8;
-    }
-
-    .hero-image {
-      flex: 1;
-      text-align: center;
-    }
-
-    .hero-image img {
-      max-width: 100%;
-      height: auto;
-      filter: drop-shadow(0 20px 25px -12px rgba(0,0,0,0.15));
-    }
-
-    /* features */
-    .features {
-      padding: 5rem 0;
-      background: white;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #1e2f3a;
-    }
-
-    .section-sub {
-      text-align: center;
-      color: #547a8a;
-      max-width: 650px;
-      margin: 0 auto 3rem;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .feature-card {
-      background: #ffffff;
-      padding: 2rem 1.5rem;
-      border-radius: 32px;
-      text-align: center;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
-      transition: all 0.25s;
-      border: 1px solid #e9f0ee;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-      border-color: #cfe6e1;
-      box-shadow: 0 25px 35px -12px rgba(15, 123, 110, 0.1);
-    }
-
-    .feature-icon {
-      font-size: 2.5rem;
-      background: #e0f2ef;
-      width: 70px;
-      height: 70px;
-      line-height: 70px;
-      border-radius: 50%;
-      margin: 0 auto 1.2rem;
-      color: #0f7b6e;
-    }
-
-    .feature-card h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.4rem;
-    }
-
-    /* plans */
-    .plans {
-      background: #f9fefc;
-      padding: 5rem 0;
-    }
-
-    .pricing-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .plan-card {
-      background: white;
-      border-radius: 2rem;
-      padding: 2rem 1.8rem;
-      flex: 1;
-      min-width: 260px;
-      max-width: 320px;
-      box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.05);
-      border: 1px solid #e2eee9;
-      transition: 0.25s;
-    }
-
-    .plan-card.popular {
-      border: 2px solid #0f7b6e;
-      position: relative;
-      background: #ffffff;
-    }
-
-    .popular-badge {
-      background: #0f7b6e;
-      color: white;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 0.3rem 1rem;
-      border-radius: 30px;
-      position: absolute;
-      top: -12px;
-      right: 1.5rem;
-    }
-
-    .plan-card h3 {
-      font-size: 1.7rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .price {
-      font-size: 2.3rem;
-      font-weight: 800;
-      color: #0f7b6e;
-      margin: 1rem 0;
-    }
-
-    .price span {
-      font-size: 1rem;
-      font-weight: 400;
-      color: #5a7e8c;
-    }
-
-    .plan-features {
-      list-style: none;
-      margin: 1.5rem 0;
-    }
-
-    .plan-features li {
-      margin: 0.8rem 0;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .plan-features i {
-      color: #0f7b6e;
-      font-size: 0.9rem;
-      width: 20px;
-    }
-
-    .plan-card .btn-plan {
-      width: 100%;
-      background: white;
-      border: 1.5px solid #cfe0db;
-      border-radius: 60px;
-      padding: 0.7rem;
-      font-weight: 600;
-      transition: 0.2s;
-      cursor: pointer;
-    }
-
-    .plan-card .btn-plan:hover {
-      background: #0f7b6e;
-      border-color: #0f7b6e;
-      color: white;
-    }
-
-    /* how it works */
-    .steps {
-      padding: 5rem 0;
-      background: white;
-    }
-
-    .steps-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .step-item {
-      flex: 1;
-      text-align: center;
-      min-width: 200px;
-    }
-
-    .step-number {
-      background: #ebf7f3;
-      width: 55px;
-      height: 55px;
-      border-radius: 60px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.6rem;
-      color: #0f7b6e;
-      margin-bottom: 1rem;
-    }
-
-    /* footer */
-    .footer {
-      background: #0e2a2a;
-      color: #cddfda;
-      padding: 3rem 0 2rem;
-      margin-top: 2rem;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-    }
-
-    .footer h4 {
-      color: white;
-      margin-bottom: 1.2rem;
-    }
-
-    .footer p, .footer a {
-      color: #bdd3cd;
-      text-decoration: none;
-      line-height: 1.7;
-    }
-
-    .footer a:hover {
-      color: white;
-    }
-
-    .copyright {
-      border-top: 1px solid #2e4a46;
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
-      text-align: center;
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 800px) {
-      .nav-container {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .nav-links {
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .hero-content h1 {
-        font-size: 2.3rem;
-      }
-      .btn-secondary {
-        margin-left: 0;
-        margin-top: 0.8rem;
-        display: inline-block;
-      }
-      .hero-grid {
-        flex-direction: column-reverse;
-        text-align: center;
-      }
-      .hero-content p {
-        max-width: 100%;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Cozy Corner Bookstore | Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fef7e8;
+        }
+        header {
+            background-color: #8b5a2b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #6b3e1a;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        .book-img {
+            width: 150px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px gray;
+        }
+        footer {
+            background-color: #8b5a2b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container nav-container">
-      <div class="logo">
-        <i class="fas fa-tint"></i>
-        <span>AquaFlow</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Delivery</a></li>
-        <li><a href="#">Plans</a></li>
-        <li><a href="#">Sustainability</a></li>
-        <li><a href="#">Support</a></li>
-      </ul>
-      <a href="#" class="btn-outline">Client login</a>
-    </div>
-  </nav>  
-   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <span class="hero-badge"><i class="fas fa-truck-fast"></i>  Same-day delivery available</span>
-          <h1>Pure spring water,<br> delivered to your doorstep</h1>
-          <p>Stay healthy and hydrated with premium glass-bottled & BPA-free 5-gallon water. Subscription or on-demand – we bring the freshness.</p>
-          <div>
-            <button class="btn-primary" onclick="alert('🚰 Order now demo — seamless checkout ready!')"><i class="fas fa-calendar-check"></i> Start delivery</button>
-            <a href="#" class="btn-secondary"><i class="fas fa-play-circle"></i> How it works</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="https://placehold.co/600x500/dfefe8/2c5f55?text=💧+Premium+Water+Bottle" alt="Water delivery bottle illustration">
-        </div>
-      </div>
-    </section>
-     <!-- Key Features -->
-    <section class="features">
-      <div class="container">
-        <h2 class="section-title">Why thousands trust AquaFlow</h2>
-        <p class="section-sub">Reliable, eco-friendly, and smart water delivery for modern lifestyles.</p>
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-recycle"></i></div>
-            <h3>Eco-friendly</h3>
-             <p>Returnable glass bottles & reusable containers. Zero single-use plastic waste.</p>
-          </div>
-           <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-flask"></i></div>
-            <h3>Alkaline & Mineral</h3>
-            <p>Naturally sourced spring water with essential minerals & pH balance.</p>
-          </div>
-            <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-clock"></i></div>
-            <h3>Smart scheduling</h3>
-            <p>Pause, modify or rush delivery via app or web dashboard.</p>
-          </div>
-             <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-hand-holding-heart"></i></div>
-              <h3>Certified hygiene</h3>
-                <p>UV sanitized bottles, contactless drop-off, and sealed caps.</p>
-          </div>
+
+<header>
+    <h1>📚 Cozy Corner Bookstore</h1>
+    <p>Old books smell like adventure</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="catalog.html">📖 Book Catalog</a>
+    <a href="contact.html">📞 Contact Us</a>
+</nav>
+
+<main>
+    <h2>Welcome, book lover!</h2>
+    <p>We sell gently used and rare books at friendly prices. <br>
+    Enjoy a quiet corner, a cup of tea, and a great story.</p>
+
+    <h3>📸 Our cozy shop</h3>
+    <img class="book-img" src="https://placekitten.com/200/150" alt="Cozy bookstore corner">
+    <img class="book-img" src="https://placekitten.com/201/150" alt="Stack of old books">
+
+    <h3>⭐ Weekly bestseller</h3>
+    <ul>
+        <li><strong>The Midnight Library</strong> – Matt Haig</li>
+        <li><strong>Atomic Habits</strong> – James Clear</li>
+        <li><strong>Where the Crawdads Sing</strong> – Delia Owens</li>
+    </ul>
+</main>
+
+<footer>
+    <p>&copy; 2026 Cozy Corner Bookstore | Every book has a story</p>
+</footer>
+
+</body>
+</html>
