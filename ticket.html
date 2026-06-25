@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Morio Ngori Ticket Booking</title>
+<style>
+  body{background:#8a1e32;color:#fff;font-family:sans-serif;display:flex;justify-content:center;padding:50px 16px;}
+  .card{background:#eb2525;padding:24px;border-radius:10px;width:320px;}
+  h2{margin-top:0;text-align:center;}
+  input{width:100%;padding:8px;margin:6px 0 14px;border:none;border-radius:5px;}
+  button{width:100%;padding:10px;border:none;border-radius:5px;background:#facc15;font-weight:bold;cursor:pointer;}
+  #result{margin-top:16px;padding:12px;border-radius:6px;background:#1d4ed8;display:none;}
+</style>
+</head>
+<body>
+<div class="card">
+  <h2>🎬 Morio Ngori Ticketing</h2>
+  <label>Name</label>
+  <input id="name" placeholder="Your name">
+  <label>Age</label>
+  <input id="age" type="number" placeholder="Your age">
+  <button onclick="book()">Book Ticket</button>
+  <div id="result"></div>
+</div>
+
+<script>
+function book(){
+  const name = document.getElementById('name').value.trim();
+  const age = Number(document.getElementById('age').value);
+  const result = document.getElementById('result');
+
+  if(!name || isNaN(age) || age < 0){
+    result.style.display = 'block';
+    result.innerHTML = "Please enter a valid name and age.";
+    return;
+  }
+
+  const msg = age < 18
+    ? `🍿 ${name}, you're a child — enjoy free popcorn!`
+    : `👀 ${name}, you're an adult — please look after any children with you.`;
+
+  result.style.display = 'block';
+  result.innerHTML = `<b>${name}</b> (${age}) — Ticket booked!<br>${msg}`;
+}
+</script>
+</body>
+</html>

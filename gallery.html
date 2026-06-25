@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Corner | Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',Arial,sans-serif;background:#fef7e8;color:#3a2618;padding-bottom:80px}
+        header{background:#8b5a2b;color:#fff;padding:1.5rem 1rem 1rem;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,.1)}
+        header h1{font-weight:700;letter-spacing:1px}
+        header h1 i{margin-right:10px}
+        .tagline{font-style:italic;opacity:.9;margin-top:4px}
+        nav{background:#6b3e1a;padding:.8rem 1rem;display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem 2rem;box-shadow:0 2px 6px rgba(0,0,0,.15);position:sticky;top:0;z-index:10}
+        nav a{color:#fff;text-decoration:none;font-weight:600;padding:.4rem .8rem;border-radius:30px;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+        nav a:hover{background:#a07244;transform:scale(1.04)}
+        main{max-width:1200px;margin:2rem auto;padding:0 1.5rem}
+        h2{color:#4d2e15;margin:0 0 .8rem}
+        h2 i{margin-right:10px;color:#8b5a2b}
+        .gallery-intro{margin-bottom:2rem;font-size:1.1rem;color:#5a3f28}
+        .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;justify-items:center;margin:2rem 0}
+        .flip-card{background:0 0;width:220px;height:220px;perspective:1000px;cursor:pointer}
+        .flip-card-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d;border-radius:20px;box-shadow:0 8px 18px rgba(0,0,0,.1)}
+        .flip-card:hover .flip-card-inner{transform:rotateY(180deg)}
+        .flip-card-front,.flip-card-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#fff}
+        .flip-card-front img{width:100%;height:100%;object-fit:cover}
+        .flip-card-back{background:#8b5a2b;color:#fff;transform:rotateY(180deg);padding:1rem}
+        .flip-card-back h3{color:#fef7e8;margin-bottom:6px;font-size:1.2rem}
+        .flip-card-back p{font-size:.9rem;opacity:.9}
+        footer{background:#8b5a2b;color:#fff;text-align:center;padding:1rem;position:fixed;bottom:0;width:100%;z-index:20}
+        @media(max-width:700px){nav{gap:.6rem 1rem;padding:.6rem}nav a{font-size:.9rem;padding:.3rem .8rem}.flip-card{width:180px;height:180px}.gallery-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.5rem}}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><i class="fas fa-book-open"></i> Cozy Corner Bookstore</h1>
+    <p class="tagline">Old books smell like adventure</p>
+</header>
+
+<nav>
+    <a href="#"><i class="fas fa-home"></i> Home</a>
+    <a href="#"><i class="fas fa-book"></i> Catalog</a>
+    <a href="#"><i class="fas fa-images"></i> Gallery</a>
+    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+</nav>
+
+<main>
+    <h2><i class="fas fa-images"></i> Bookshop Gallery</h2>
+    <p class="gallery-intro">Hover over the cards to flip and see the magic.</p>
+
+    <div class="gallery-grid">
+        <!-- Card 1 -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://picsum.photos/300/200?random=1" alt="Reading nook">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Reading Nook</h3>
+                    <p>Our favorite corner with a view.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://picsum.photos/300/200?random=2" alt="Vintage books">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Vintage Stack</h3>
+                    <p>Rare finds from the 19th century.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://picsum.photos/300/200?random=3" alt="Tea and books">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Tea & Pages</h3>
+                    <p>Perfect pair for a rainy day.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://picsum.photos/300/200?random=4" alt="Bookshelf">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Wall of Stories</h3>
+                    <p>Over 2000 titles in stock.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>✨ Come for the books, stay for the stories ✨</p>
+</footer>
+
+</body>
+</html>

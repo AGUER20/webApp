@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox Timetable (Mon–Fri)</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f1ea;
+    margin: 0;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #2d2a26;
+    margin-bottom: 8px;
+  }
+
+  p.subtitle {
+    text-align: center;
+    color: #6b6660;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+
+  /* ===== PARENT ===== */
+  .timetable {
+    display: flex;          
+    flex-wrap: wrap;        
+                            
+    gap: 16px;              
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  
+  .day {
+    flex: 1 1 160px;        
+                                
+    padding: 24px 16px;     
+
+    background: #ffffff;
+    border-radius: 10px;
+    border-top: 4px solid #c1684b;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    text-align: center;
+  }
+
+  .day h2 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    color: #c1684b;
+  }
+
+  .day ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #4a4540;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Weekly Timetable</h1>
+  <p class="subtitle">A simple Flexbox layout — Monday to Friday</p>
+
+  <!-- PARENT -->
+  <div class="timetable">
+
+    <!-- CHILD -->
+    <div class="day">
+      <h2>Monday</h2>
+      <ul>
+        <li>Math</li>
+        <li>Science</li>
+        <li>English</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <h2>Tuesday</h2>
+      <ul>
+        <li>History</li>
+        <li>Art</li>
+        <li>PE</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <h2>Wednesday</h2>
+      <ul>
+        <li>Computer Science</li>
+        <li>Music</li>
+        <li>Biology</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <h2>Thursday</h2>
+      <ul>
+        <li>Chemistry</li>
+        <li>Geography</li>
+        <li>English</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <h2>Friday</h2>
+      <ul>
+        <li>Physics</li>
+        <li>Literature</li>
+        <li>Sports</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
