@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Corner | Book Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 90px;
+            background-color: #fef7e8;
+            color: #3b1f0a;
+        }
+        header {
+            background-color: #8b5a2b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #6b3e1a;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #8b5a2b;
+            padding: 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #e2c7a1;
+        }
+        .book-cover {
+            width: 80px;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: #8b5a2b;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #6b3e1a;
+        }
+        .details-row td {
+            background-color: #fff3e0;
+            font-style: italic;
+            display: none;
+        }
+        .details-row.open td {
+            display: table-cell;
+        }
+        footer {
+            background-color: #8b5a2b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📚 Book Catalog</h1>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="catalog.html">📖 Book Catalog</a>
+    <a href="gallery.html">🖼️ Gallery</a>
+    <a href="contact.html">📞 Contact Us</a>
+</nav>
+
+<main>
+    <h2>📖 Books we have in stock</h2>
+    <table>
+        <tr>
+            <th>Cover</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Details</th>
+        </tr>
+
+        <tr>
+            <td><img class="book-cover" src="https://picsum.photos/80/100?random=3" alt="Book cover 1"></td>
+            <td>A Doll's House</td>
+            <td>Henrik Ibsen</td>
+            <td>Ksh 900.0</td>
+            <td><button class="btn details-btn">View</button></td>
+        </tr>
+        <tr class="details-row">
+            <td colspan="5">A classic 19th-century play about a woman's fight for independence within a restrictive marriage.</td>
+        </tr>
+
+        <tr>
+            <td><img class="book-cover" src="https://picsum.photos/80/100?random=4" alt="Book cover 2"></td>
+            <td>Memories we Lost</td>
+            <td>Chris Wanjala</td>
+            <td>Ksh 700.0</td>
+            <td><button class="btn details-btn">View</button></td>
+        </tr>
+        <tr class="details-row">
+            <td colspan="5">A moving short story collection exploring mental illness and family bonds in East Africa.</td>
+        </tr>
+
+        <tr>
+            <td><img class="book-cover" src="https://picsum.photos/80/100?random=5" alt="Book cover 3"></td>
+            <td>Chozi la Heri</td>
+            <td>Ken Walibora</td>
+            <td>Ksh 999.0</td>
+            <td><button class="btn details-btn">View</button></td>
+        </tr>
+        <tr class="details-row">
+            <td colspan="5">An award-winning Kiswahili novel following orphaned twins navigating a corrupt world.</td>
+        </tr>
+    </table>
+
+    <h3>💡 New arrivals this week</h3>
+    <ul>
+        <li>Dune – Frank Herbert</li>
+        <li>Becoming – Michelle Obama</li>
+        <li>The Silent Patient – Alex Michaelides</li>
+    </ul>
+</main>
+
+<footer>
+    <p>📚 All books are gently used or new – satisfaction guaranteed</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
